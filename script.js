@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation for cards
+    // Implementing clicking for the cards
     document.getElementById('personal-card').onclick = () => {
         document.getElementById('personal').scrollIntoView({ behavior: 'smooth' });
     };
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('professional').scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Slideshow functionality
+    // Implementing the slideshow
     const slides = document.querySelectorAll('.slideshow-container img');
     let currentSlide = 0;
 
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     showSlide(currentSlide);
-    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    setInterval(nextSlide, 3000); 
 
-    // Overlay click functionality
+    // Implementing overlay and clickability for the projects
     const projectCards = document.querySelectorAll('.project-card .overlay');
     projectCards.forEach(overlay => {
         overlay.addEventListener('click', () => {
