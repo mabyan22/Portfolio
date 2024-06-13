@@ -1,0 +1,396 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Body styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #f7f7f7;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #111;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.typing-animation {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #27ae60;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    width: 14ch;
+    margin: 0 auto;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 15ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #27ae60; }
+}
+
+/* Card styles */
+#cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2em 0;
+}
+
+.card {
+    width: 40%;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-bottom: 1em;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.10);
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #27ae60;
+    padding: 0.5em 0;
+}
+
+/* Section styles */
+#professional, #personal {
+    margin: 2em;
+    padding: 2em;
+    border-radius: 8px;
+    background: #f7f7f7;
+    color: #111;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#professional h2, #personal h2 {
+    font-family: 'Playfair Display', serif;
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    background: #111;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.text-section, .icons-section {
+    flex: 1;
+}
+
+.text-section h3, .icons-section h3 {
+    font-family: 'Playfair Display', serif;
+    color: #27ae60;
+    margin-bottom: 0.5em;
+}
+
+.text-section p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align project cards */
+    gap: 2em; /* Equal spacing between project cards */
+}
+
+.project-card {
+    position: relative;
+    width: 30%;
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.8);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.overlay h4, .overlay p {
+    font-family: 'Nunito', sans-serif;
+    margin: 0.5em 1em;
+    font-size: 1.2em;
+    text-align: center;
+    color: #f7f7f7;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+/* Styles for education and work experience sections */
+.education-work-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.education, .work-experience {
+    width: 48%;
+}
+
+.education-item, .work-item {
+    margin-bottom: 1.5em;
+}
+
+.education-item h4, .work-item h4 {
+    font-family: 'Playfair Display', serif;
+    color: #27ae60;
+}
+
+.education-item p, .work-item p {
+    color: #b8b8b8;
+    margin: 0.5em 0;
+}
+
+.work-item ul {
+    margin: 0;
+    padding: 0 0 0 1em;
+    list-style-type: disc;
+}
+
+.work-item ul li {
+    margin-bottom: 0.5em;
+    color: #7c7b7b;
+}
+
+/* Styles for skills and icons section */
+.skills-icons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    background: #111;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em; /* Add whitespace between sections */
+}
+
+.skills {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2em;
+}
+
+.icons-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.icons-section img {
+    width: 50px; /* Adjust width to make icons smaller */
+    height: 50px; /* Adjust height to make icons smaller */
+    margin: 10px;
+    border-radius: 4%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.skill {
+    margin-bottom: 1em;
+}
+
+.skill h4 {
+    justify-content: space-between;
+    font-family: 'Playfair Display', serif;
+    color: #27ae60;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 100px;
+    margin-inline-end: 750px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 10px;
+    margin-right: 100px;
+}
+
+.progress {
+    height: 100%;
+    background: #27ae60;
+}
+
+/* Styles for personal details section */
+.personal-details {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-details li {
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.personal-details strong {
+    color: #27ae60;
+}
+
+.personal-details.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personal-details.two-columns li {
+    width: 48%;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.profile-picture img {
+    width: 250px; /* Adjust size of the profile picture */
+    height: 250px; /* Adjust size of the profile picture */
+    border-radius: 50%; /* Make the image round */
+    border: 4px solid #27ae60; /* Optional: Add border around the image */
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.paragraph p {
+    color: #333;
+    line-height: 1.8;
+    font-family: 'Nunito', sans-serif;
+    text-align: justify;
+    margin: 1em 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #f7f7f7;
+    color: #111;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+
+    .education-work-section {
+        flex-direction: column;
+    }
+
+    .education, .work-experience {
+        width: 100%;
+    }
+
+    .skills-icons-section {
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    .icons {
+        width: 100%;
+    }
+
+    .personal-details.two-columns li {
+        width: 100%;
+    }
+
+    .projects-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .overlay h4, .overlay p {
+        font-size: 40%;
+    }
+
+}
+
+
